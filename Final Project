@@ -1,0 +1,342 @@
+package perulangan;
+import java.util.Scanner;
+
+ * @author Muhammad Fawwaz
+ 
+public class FinalProject {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double hargaMiniCoffee = 6500, hargaKejuSusu = 6500, hargaCheeseMawar = 7000;
+        double hargaGula = 4500 , hargaOreo = 7000, hargaOliballKeju = 5000;
+        double hargaRisol = 7000, hargaOnde = 5000, hargaKroket = 6000;
+        double grandTotal = 0, total = 0, bayar, kembalian;
+        double totalPemasukan = 0; 
+        int pilih1, pilih2, pilih3 = 0, jumlah;
+
+        do {
+            System.out.print("\n================================");
+            System.out.println("\nProgram Kasir");
+            System.out.println("1. Aplikasi Kasir \n2. Aplikasi Admin \n3. Aplikasi Owner \n4. Exit");
+            System.out.print("Pilih = ");
+            pilih1 = sc.nextInt();
+
+            switch (pilih1) {
+                case 1: // Aplikasi Kasir
+                    grandTotal = 0; // Reset grand total setiap kali masuk aplikasi kasir
+                    do {
+                        System.out.print("\n================================");
+                        System.out.println("\nAplikasi Kasir");
+                        System.out.println("1. Roti \n2. Donut \n3. Aneka Kue \n4. Selesai");
+                        System.out.print("Pilih = ");
+                        pilih2 = sc.nextInt();
+
+                        switch (pilih2) {
+                            case 1:
+                                do {
+                                    System.out.print("\n================================");
+                                    System.out.println("\nRoti");
+                                    System.out.println("1. Mini Coffee  [ Rp " + hargaMiniCoffee + " ]");
+                                    System.out.println("2. Keju Susu   [ Rp " + hargaKejuSusu + " ]");
+                                    System.out.println("3. Cheese Mawar [ Rp " + hargaCheeseMawar + " ]");
+                                    System.out.println("4. Back");
+                                    System.out.print("Pilih = ");
+                                    pilih3 = sc.nextInt();
+
+                                    switch (pilih3) {
+                                        case 1:
+                                            System.out.println("\nRoti Mini Coffee [ Rp " + hargaMiniCoffee + " ]");
+                                            System.out.print("Jumlah beli = ");
+                                            jumlah = sc.nextInt();
+                                            total = jumlah * hargaMiniCoffee;
+                                            grandTotal += total;
+                                            break;
+
+                                        case 2:
+                                            System.out.println("\nRoti Keju Susu [ Rp " + hargaKejuSusu + " ]");
+                                            System.out.print("Jumlah beli = ");
+                                            jumlah = sc.nextInt();
+                                            total = jumlah * hargaKejuSusu;
+                                            grandTotal += total;
+                                            break;
+
+                                        case 3:
+                                            System.out.println("\nRoti Cheese Mawar [ Rp " + hargaCheeseMawar + " ]");
+                                            System.out.print("Jumlah beli = ");
+                                            jumlah = sc.nextInt();
+                                            total = jumlah * hargaCheeseMawar;
+                                            grandTotal += total;
+                                            break;
+
+                                        case 4:
+                                            break;
+
+                                        default:
+                                            System.out.println("Pilihan tidak ditemukan");
+                                            break;
+                                    }
+                                } while (pilih3 != 4);
+                                break;
+
+                            case 2:
+                                do {
+                                    System.out.print("\n================================");
+                                    System.out.println("\nDonat");
+                                    System.out.println("1. Gula  [ Rp " + hargaGula + " ]");
+                                    System.out.println("2. Oreo       [ Rp " + hargaOreo + " ]");
+                                    System.out.println("3. Oliball Keju    [ Rp " + hargaOliballKeju + " ]");
+                                    System.out.println("4. Back");
+                                    System.out.print("Pilih = ");
+                                    pilih3 = sc.nextInt();
+
+                                    switch (pilih3) {
+                                        case 1:
+                                            System.out.println("\nDonat Gula [ Rp " + hargaGula + " ]");
+                                            System.out.print("Jumlah beli = ");
+                                            jumlah = sc.nextInt();
+                                            total = jumlah * hargaGula;
+                                            grandTotal += total;
+                                            break;
+
+                                        case 2:
+                                            System.out.println("\nDonat Oreo [ Rp " + hargaOreo + " ]");
+                                            System.out.print("Jumlah beli = ");
+                                            jumlah = sc.nextInt();
+                                            total = jumlah * hargaOreo;
+                                            grandTotal += total;
+                                            break;
+
+                                        case 3:
+                                            System.out.println("\nDonat Oliball Keju [ Rp " + hargaOliballKeju + " ]");
+                                            System.out.print("Jumlah beli = ");
+                                            jumlah = sc.nextInt();
+                                            total = jumlah * hargaOliballKeju;
+                                            grandTotal += total;
+                                            break;
+
+                                        case 4:
+                                            break;
+
+                                        default:
+                                            System.out.println("Pilihan tidak ditemukan");
+                                            break;
+                                    }
+                                } while (pilih3 != 4);
+                                break;
+                                
+                            case 3:
+                                do {
+                                    System.out.print("\n================================");
+                                    System.out.println("\nAneka Kue");
+                                    System.out.println("1. Risol  [ Rp " + hargaRisol + " ]");
+                                    System.out.println("2. Onde       [ Rp " + hargaOnde + " ]");
+                                    System.out.println("3. Kroket    [ Rp " + hargaKroket + " ]");
+                                    System.out.println("4. Back");
+                                    System.out.print("Pilih = ");
+                                    pilih3 = sc.nextInt();
+
+                                    switch (pilih3) {
+                                        case 1:
+                                            System.out.println("\nRisol [ Rp " + hargaRisol + " ]");
+                                            System.out.print("Jumlah beli = ");
+                                            jumlah = sc.nextInt();
+                                            total = jumlah * hargaRisol;
+                                            grandTotal += total;
+                                            break;
+
+                                        case 2:
+                                            System.out.println("\nOnde [ Rp " + hargaOnde + " ]");
+                                            System.out.print("Jumlah beli = ");
+                                            jumlah = sc.nextInt();
+                                            total = jumlah * hargaOnde;
+                                            grandTotal += total;
+                                            break;
+
+                                        case 3:
+                                            System.out.println("\nKroket [ Rp " + hargaKroket + " ]");
+                                            System.out.print("Jumlah beli = ");
+                                            jumlah = sc.nextInt();
+                                            total = jumlah * hargaKroket;
+                                            grandTotal += total;
+                                            break;
+
+                                        case 4:
+                                            break;
+
+                                        default:
+                                            System.out.println("Pilihan tidak ditemukan");
+                                            break;
+                                    }
+                                } while (pilih3 != 4);
+                                break;
+                                
+                            case 4:
+                                System.out.println("\n================================");
+                                System.out.println("Total Pembelian: Rp " + grandTotal);
+                                System.out.print("Masukkan uang bayar: Rp ");
+                                bayar = sc.nextDouble();
+
+                                if (bayar >= grandTotal) {
+                                    kembalian = bayar - grandTotal;
+                                    System.out.println("Kembalian: Rp " + kembalian);
+                                    totalPemasukan += grandTotal; // Tambahkan transaksi ke pemasukan
+                                } else {
+                                    System.out.println("Uang tidak cukup. Transaksi dibatalkan.");
+                                }
+                                break;
+
+                            default:
+                                System.out.println("Pilihan tidak ditemukan");
+                                break;
+                        }
+                    } while (pilih2 != 4);
+                    break;
+
+                case 2: // Aplikasi Admin
+                    do {
+                        System.out.print("\n================================");
+                        System.out.println("\nAplikasi Admin");
+                        System.out.println("1. Roti \n2. Donat \n3. Aneka Kue \n4. Selesai");
+                        System.out.print("Pilih = ");
+                        pilih2 = sc.nextInt();
+
+                        switch (pilih2) {
+                            case 1:
+                                do {
+                                    System.out.print("\n================================");
+                                    System.out.println("\nUbah Harga Roti");
+                                    System.out.println("1. Mini Coffee  [ Rp " + hargaMiniCoffee + " ]");
+                                    System.out.println("2. Keju Susu   [ Rp " + hargaKejuSusu + " ]");
+                                    System.out.println("3. Cheese Mawar [ Rp " + hargaCheeseMawar + " ]");
+                                    System.out.println("4. Back");
+                                    System.out.print("Pilih = ");
+                                    pilih3 = sc.nextInt();
+
+                                    switch (pilih3) {
+                                        case 1:
+                                            System.out.print("Masukkan harga baru untuk Mini Coffee: ");
+                                            hargaMiniCoffee = sc.nextDouble();
+                                            break;
+
+                                        case 2:
+                                            System.out.print("Masukkan harga baru untuk Keju Susu: ");
+                                            hargaKejuSusu = sc.nextDouble();
+                                            break;
+
+                                        case 3:
+                                            System.out.print("Masukkan harga baru untuk Cheese mawar: ");
+                                            hargaCheeseMawar = sc.nextDouble();
+                                            break;
+
+                                        case 4:
+                                            break;
+
+                                        default:
+                                            System.out.println("Pilihan tidak ditemukan");
+                                            break;
+                                    }
+                                } while (pilih3 != 4);
+                                break;
+
+                            case 2:
+                                do {
+                                    System.out.print("\n================================");
+                                    System.out.println("\nUbah Harga Donat");
+                                    System.out.println("1. Donat Gula [ Rp " + hargaGula + " ]");
+                                    System.out.println("2. Donat Oreo       [ Rp " + hargaOreo + " ]");
+                                    System.out.println("3. Oliball Keju    [ Rp " + hargaOliballKeju + " ]");
+                                    System.out.println("4. Back");
+                                    System.out.print("Pilih = ");
+                                    pilih3 = sc.nextInt();
+
+                                    switch (pilih3) {
+                                        case 1:
+                                            System.out.print("Masukkan harga baru untuk Donat Gula: ");
+                                            hargaGula = sc.nextDouble();
+                                            break;
+
+                                        case 2:
+                                            System.out.print("Masukkan harga baru untuk Donat Oreo: ");
+                                            hargaOreo = sc.nextDouble();
+                                            break;
+
+                                        case 3:
+                                            System.out.print("Masukkan harga baru untuk Oliball Keju: ");
+                                            hargaOliballKeju = sc.nextDouble();
+                                            break;
+
+                                        case 4:
+                                            break;
+
+                                        default:
+                                            System.out.println("Pilihan tidak ditemukan");
+                                            break;
+                                    }
+                                } while (pilih3 != 4);
+                                break;
+                                
+                            case 3:
+                                do {
+                                    System.out.print("\n================================");
+                                    System.out.println("\nUbah Harga Aneka Kue");
+                                    System.out.println("1. Risol [ Rp " + hargaRisol + " ]");
+                                    System.out.println("2. Onde      [ Rp " + hargaOnde + " ]");
+                                    System.out.println("3. Kroket    [ Rp " + hargaKroket + " ]");
+                                    System.out.println("4. Back");
+                                    System.out.print("Pilih = ");
+                                    pilih3 = sc.nextInt();
+
+                                    switch (pilih3) {
+                                        case 1:
+                                            System.out.print("Masukkan harga baru untuk Risol: ");
+                                            hargaRisol = sc.nextDouble();
+                                            break;
+
+                                        case 2:
+                                            System.out.print("Masukkan harga baru untuk Onde: ");
+                                            hargaOnde = sc.nextDouble();
+                                            break;
+
+                                        case 3:
+                                            System.out.print("Masukkan harga baru untuk Kroket: ");
+                                            hargaKroket = sc.nextDouble();
+                                            break;
+
+                                        case 4:
+                                            break;
+
+                                        default:
+                                            System.out.println("Pilihan tidak ditemukan");
+                                            break;
+                                    }
+                                } while (pilih3 != 4);
+                                break;
+
+                            case 4:
+                                break;
+
+                            default:
+                                System.out.println("Pilihan tidak ditemukan");
+                                break;
+                        }
+                    } while (pilih2 != 4);
+                    break;
+
+                case 3: // Aplikasi Owner
+                    System.out.print("\n================================");
+                    System.out.println("\nAplikasi Owner");
+                    System.out.println("Total Semua Pemasukan: Rp " + totalPemasukan);
+                    break;
+
+                case 4:
+                    System.out.println("Keluar dari program. Terima kasih!");
+                    break;
+
+                default:
+                    System.out.println("Pilihan tidak ditemukan");
+                    break;
+            }
+        } while(pilih1 != 4);
+    
+    }    
+}
